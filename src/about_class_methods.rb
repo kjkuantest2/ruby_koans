@@ -1,25 +1,25 @@
-require File.expand_path(File.dirname(__FILE__) + '/neo')
+require File.expand_path(File.dirname(__FILE__) + "/neo")
 
 class AboutClassMethods < Neo::Koan
   class Dog
-  end
+    end
 
-  def test_objects_are_objects
-    fido = Dog.new
-    assert_equal __(true), fido.is_a?(Object)
-  end
+    def test_objects_are_objects
+      fido = Dog.new
+      assert_equal __(true), fido.is_a?(Object)
+    end
 
-  def test_classes_are_classes
-    assert_equal __(true), Dog.is_a?(Class)
-  end
+def test_classes_are_classes
+  assert_equal __(true), Dog.is_a?(Class)
+end
 
   def test_classes_are_objects_too
     assert_equal __(true), Dog.is_a?(Object)
   end
 
   def test_objects_have_methods
-    fido = Dog.new
-    assert fido.methods.size > _n_(30)
+    fido=Dog.new
+    assert fido.methods.size>_n_(30)
   end
 
   def test_classes_have_methods
